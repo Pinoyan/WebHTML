@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peko Web Manager</title>
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="This is a webpage only for people who have been granted access.">
+  <meta property="og:title" content="Peko's Web Manager">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg">
+    <ul class="glass">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>
+      <img src="assets/Peko.png" alt="Icon">
+      Peko Web Manager
+    </h1>
+    <p>Please enter your login credentials.</p>
+    <form id="login-form" onsubmit="return handleLogin(event)">
+      <input type="text" id="username" placeholder="Username" required>
+      <div style="position: relative">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="show-password" onclick="togglePasswordVisibility()">
+          <img src="assets/visibility_off.svg" alt="Show Password" id="password-icon">
+        </span>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="close-button" onclick="closePopup()">
+    <img src="assets/close.svg" alt="Close">
+    </div>
+    <h1>Paste the AppState here!</h1>
+    <textarea id="text-input" rows="4" cols="50"></textarea>
+    <button onclick="saveText()">Submit</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
